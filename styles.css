@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 50px auto;
+  grid-template-areas:
+    "one two three four"
+    "one five six seven";
+}
+
+.item-one {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 8px;
+  grid-area: one;
+}
+
+.one-top {
+  background-color: hsl(246, 80%, 60%);
+  padding: 1rem;
+  padding-bottom: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  border-radius: 8px;
+}
+
+.one-top span {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: 300;
+}
+
+.one-top img {
+  width: 3.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.one-top h1 {
+  font-weight: 300;
+}
+
+.one-bottom {
+  color: white;
+  font-family: rubik;
+  font-weight: 300;
+  background-color: hsl(235, 46%, 20%);
+  padding: 1rem;
+  padding-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.one-bottom p {
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.dim-light {
+  opacity: 0.6;
+}
+
+.item-two {
+  background-color: hsl(15, 100%, 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 9px;
+  background-image: url(images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: top -5px right 3px;
+  background-size: 4rem;
+}
+
+.two-conta {
+  background-color: hsl(235, 45%, 61%);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.top-two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-family: rubik;
+  color: white;
+}
+
+.two-conta h1 {
+  color: white;
+  font-family: rubik;
+  font-weight: 300;
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.two-conta .stats {
+  color: white;
+  font-family: rubik;
+  font-weight: 300;
+  opacity: 0.65;
+  font-size: 0.8rem;
+}
+
+.item-three {
+  background-color: hsl(195, 74%, 62%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 9px;
+  background-image: url(images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: top -5px right 3px;
+  background-size: 4rem;
+}
+
+.three-conta {
+  background-color: hsl(235, 46%, 20%);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.item-four {
+  background-color: hsl(348, 85%, 68%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 9px;
+  background-image: url(images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: top -5px right 3px;
+  background-size: 4rem;
+}
+
+.four-conta {
+  background-color: hsl(235, 46%, 20%);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.item-five {
+  background-color: hsl(145, 58%, 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 9px;
+  background-image: url(images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: top -5px right 3px;
+  background-size: 4rem;
+}
+
+.item-six {
+  background-color: hsl(264, 64%, 52%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 9px;
+  background-image: url(images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: top -5px right 3px;
+  background-size: 4rem;
+}
+
+.item-seven {
+  background-color: hsl(43, 84%, 65%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 9px;
+  background-image: url(images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: top -5px right 3px;
+  background-size: 4rem;
+}
+
+@media (max-width: 1020px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six"
+      "seven";
+    gap: 2rem;
+  }
+
+  .item {
+    height: 10rem;
+  }
+
+  .one-top {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .one-top img {
+    margin-bottom: 0;
+    margin-right: 0.7rem;
+  }
+
+  .one-top span {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .author-name {
+    align-self: center;
+  }
+
+  .one-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .stat-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
